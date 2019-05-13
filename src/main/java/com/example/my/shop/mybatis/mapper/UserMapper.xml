@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 接口全名 -->
+<mapper namespace="com.example.my.shop.mybatis.mapper.UserMapper">
+
+    <!-- statement -->
+    <select id="selectById" parameterType="int" resultType="com.example.my.shop.mybatis.entity.User" >
+		SELECT * FROM user where id=#{id}
+	</select>
+
+    <!-- 通过useGeneratedKeys="true"  keyProperty="id" 获取刚刚插入的自增主键id, keyProperty="id
+     并把赋值给对象的属性id
+     -->
+    <insert id="insertUser" parameterType="com.example.my.shop.mybatis.entity.User" useGeneratedKeys="true" keyProperty="id" >
+		insert into user(email,name) values (#{email},#{name})
+	</insert>
+
+    <!-- 方式二 获取刚刚插入的自增主键id  -->
+    <insert id="insertUserTwo" parameterType="com.example.my.shop.mybatis.entity.User" useGeneratedKeys="true">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user(email,name) values (#{email},#{name})
+    </insert>
+
+    <select id="findUser" resultType="com.example.my.shop.mybatis.entity.User">
+		select * from user where id=#{id} and email=#{email}
+	</select>
+
+</mapper>
