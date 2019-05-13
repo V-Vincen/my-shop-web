@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d666d8f7-700a-46ab-9942-19e6fc55fcae" name="Default Changelist" comment="" />
+    <list default="true" id="d666d8f7-700a-46ab-9942-19e6fc55fcae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/assets/plugins/jquery-treeTable/treeTable.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -379,12 +383,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24904000" />
+    <option name="totallyTimeSpent" value="25166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49646392" visible="true" weight="0.26827633" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49646392" visible="true" weight="0.22535211" />
       <window_info id="Structure" order="1" sideWeight="0.50353605" side_tool="true" weight="0.19906166" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.50353605" side_tool="true" weight="0.19906166" />
@@ -405,7 +409,7 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.670571" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32673267" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32551318" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.32952926" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -684,13 +688,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>
