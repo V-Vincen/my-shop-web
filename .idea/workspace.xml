@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d666d8f7-700a-46ab-9942-19e6fc55fcae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/assets/plugins/jquery-treeTable/treeTable.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="d666d8f7-700a-46ab-9942-19e6fc55fcae" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,9 +124,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="280" />
-    <option name="width" value="1650" />
-    <option name="height" value="1040" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -348,6 +344,14 @@
       <workItem from="1557719705294" duration="14913000" />
       <workItem from="1557739466675" duration="4407000" />
     </task>
+    <task id="LOCAL-00001" summary="第二次提交">
+      <created>1557744915849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557744915849</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -383,7 +387,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25166000" />
+    <option name="totallyTimeSpent" value="25491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -407,12 +411,12 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281027" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.44802344" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.670571" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.670088" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32551318" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.4882698" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.32952926" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32991204" />
       <window_info anchor="bottom" id="Alibaba Cloud View" order="15" weight="0.32952926" />
       <window_info anchor="bottom" id="JRebel Executor" order="16" sideWeight="0.2548756" weight="0.5813296" />
       <window_info anchor="bottom" id="JRebel Console" order="17" sideWeight="0.54325956" side_tool="true" weight="0.7892504" />
@@ -434,6 +438,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第二次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main/src/resources/db.proterties" />
