@@ -1,4 +1,5 @@
 package com.example.my.shop.mybatis.mapper;
+import java.util.List;
 
 import com.example.my.shop.mybatis.entity.TbUser;
 import org.apache.ibatis.annotations.Param;
@@ -17,4 +18,8 @@ public interface TbUserMapper {
     int updateByPrimaryKey(TbUser record);
 
     TbUser getByEmail(@Param("email") String email);
+
+    List<TbUser> findAll();
+
+
 }

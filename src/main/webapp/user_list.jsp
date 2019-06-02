@@ -61,7 +61,7 @@
                         <div class="box-tools">
                             <div class="row" style="padding: 10px">
                                 <div class="col-xs-2">
-                                    <a href="/user/form" type="button" class="btn btn-success btn-sm" style="width: 120px;"><i class="fa fa-plus"></i>&nbsp Add New</a>
+                                    <a href="/user_form.jsp" type="button" class="btn btn-success btn-sm" style="width: 120px;"><i class="fa fa-plus"></i>&nbsp Add New</a>
                                 </div>
                                 <div class="col-xs-2">
                                     <button type="button" class="btn btn-danger btn-sm" id ="deleteMulti" onclick="App.deleteMulti('/user/deleteMulti');" style="width: 120px;"><i class="fa fa-remove"></i>&nbsp Delete All</button>
@@ -143,7 +143,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                               <%-- <c:forEach items="${tbUsers}" var="tbUsers" >
+
+                               <c:forEach items="${tbUsers}" var="tbUsers" >
                                     <tr>
                                         <td><input id="${tbUsers.id}" type="checkbox" class="minimal" /></td>
                                         <td>${tbUsers.id}</td>
@@ -165,7 +166,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                </c:forEach>--%>
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -251,106 +252,106 @@
 
 <script type="text/javascript">
 
-$(function () {
-
-    $("#toggle-advanced-search").click(function () {
-        $("i", this).toggleClass("fa-angle-double-down fa-angle-double-up");
-        $("#div-advanced-search").slideToggle("fast");
-    });
-
-    var _columns = [
-            {
-                "data": function (row, type, val, meta) {
-                    return '<input id="'+row.id+'" type="checkbox" class="minimal" />';
-                }
-            },
-            {"data": "id"},
-            {"data": "username"},
-            {"data": "phone"},
-            {"data": "email"},
-            {
-                "data": function (row, type, val, meta) {
-                    return DateTime.format(row.updated,"yyyy-MM-dd HH:mm:ss");
-                }
-            },
-            {
-                "data": function (row, type, val, meta) {
-                    var url = '/user/deleteByPrimaryKey';
-                    return ' <button type="button" class="btn btn-info btn-sm" style="width: 100px;" id="showDetail" value="'+ row.id +'" ><i class="fa fa-search"></i>&nbsp Info</button> ' +
-                        '  <a href="/user/form?id='+ row.id +'" class="btn btn-primary btn-sm" style="width: 100px;"><i class="fa fa-edit"></i>&nbsp Edit</a> ' +
-                        '  <button type="button" class="btn btn-danger btn-sm"  onclick="App.deleteById(\''+url+'\','+row.id+')" style="width: 100px;"><i class="fa fa-trash-o"></i>&nbsp Delete</button> ';
-                }
-            }
-        ];
-
-   var _dataTable = App.initDataTables("/user/page",_columns);
-
-    /**
-     * @Method:
-     * @Description:    模糊查询
-     * @Param:
-     * @return:
-     * @Author:        Mr.Vincent
-     * @Date:          2019/5/7
-     */
-    $("#simple-search").click(function () {
-        var likeSearch = $("#likeSearch").val();
-        var param = {
-            "likeSearch": likeSearch
-        }
-        _dataTable.settings()[0].ajax.data = param;
-        _dataTable.ajax.reload();
-    });
-
-    /**
-     * @Method:
-     * @Description:    高级查询
-     * @Param:
-     * @return:
-     * @Author:        Mr.Vincent
-     * @Date:          2019/5/7
-     */
-    $("#advanced-search").click(function () {
-        debugger
-        var username = $("#username").val();
-        var phone = $("#phone").val();
-        var email = $("#email").val();
-        var param = {
-            "username": username,
-            "phone": phone,
-            "email": email
-        }
-        _dataTable.settings()[0].ajax.data = param;
-        _dataTable.ajax.reload();
-    });
-
-    /**
-     * @Method:
-     * @Description:   查看详情
-     * @Param:
-     * @return:
-     * @Author:        Mr.Vincent
-     * @Date:          2019/5/7
-     */
-    $("#table_id_example").on("click","#showDetail",function () {
-        var param = $(this).val();
-        $.ajax({
-            url: "/user/showDetail",
-            type: "post",
-            data: {id: param},
-            dataType: "json",
-            success: function (data) {
-                $("#modalUsernamre").val(data.username);
-                $("#modalEmail").val(data.email);
-                $("#modalPhone").val(data.phone);
-                $("#modalUpdated").val(App.getFormatDateTime(new Date(data.updated)));
-                $("#modalCreated").val(App.getFormatDateTime(new Date(data.created)));
-                $("#modal-info-showDetail").modal("show");
-            }
-        })
-    });
-
-});
+// $(function () {
+//
+//     $("#toggle-advanced-search").click(function () {
+//         $("i", this).toggleClass("fa-angle-double-down fa-angle-double-up");
+//         $("#div-advanced-search").slideToggle("fast");
+//     });
+//
+//     var _columns = [
+//             {
+//                 "data": function (row, type, val, meta) {
+//                     return '<input id="'+row.id+'" type="checkbox" class="minimal" />';
+//                 }
+//             },
+//             {"data": "id"},
+//             {"data": "username"},
+//             {"data": "phone"},
+//             {"data": "email"},
+//             {
+//                 "data": function (row, type, val, meta) {
+//                     return DateTime.format(row.updated,"yyyy-MM-dd HH:mm:ss");
+//                 }
+//             },
+//             {
+//                 "data": function (row, type, val, meta) {
+//                     var url = '/user/deleteByPrimaryKey';
+//                     return ' <button type="button" class="btn btn-info btn-sm" style="width: 100px;" id="showDetail" value="'+ row.id +'" ><i class="fa fa-search"></i>&nbsp Info</button> ' +
+//                         '  <a href="/user/form?id='+ row.id +'" class="btn btn-primary btn-sm" style="width: 100px;"><i class="fa fa-edit"></i>&nbsp Edit</a> ' +
+//                         '  <button type="button" class="btn btn-danger btn-sm"  onclick="App.deleteById(\''+url+'\','+row.id+')" style="width: 100px;"><i class="fa fa-trash-o"></i>&nbsp Delete</button> ';
+//                 }
+//             }
+//         ];
+//
+//    var _dataTable = App.initDataTables("/user/page",_columns);
+//
+//     /**
+//      * @Method:
+//      * @Description:    模糊查询
+//      * @Param:
+//      * @return:
+//      * @Author:        Mr.Vincent
+//      * @Date:          2019/5/7
+//      */
+//     $("#simple-search").click(function () {
+//         var likeSearch = $("#likeSearch").val();
+//         var param = {
+//             "likeSearch": likeSearch
+//         }
+//         _dataTable.settings()[0].ajax.data = param;
+//         _dataTable.ajax.reload();
+//     });
+//
+//     /**
+//      * @Method:
+//      * @Description:    高级查询
+//      * @Param:
+//      * @return:
+//      * @Author:        Mr.Vincent
+//      * @Date:          2019/5/7
+//      */
+//     $("#advanced-search").click(function () {
+//         debugger
+//         var username = $("#username").val();
+//         var phone = $("#phone").val();
+//         var email = $("#email").val();
+//         var param = {
+//             "username": username,
+//             "phone": phone,
+//             "email": email
+//         }
+//         _dataTable.settings()[0].ajax.data = param;
+//         _dataTable.ajax.reload();
+//     });
+//
+//     /**
+//      * @Method:
+//      * @Description:   查看详情
+//      * @Param:
+//      * @return:
+//      * @Author:        Mr.Vincent
+//      * @Date:          2019/5/7
+//      */
+//     $("#table_id_example").on("click","#showDetail",function () {
+//         var param = $(this).val();
+//         $.ajax({
+//             url: "/user/showDetail",
+//             type: "post",
+//             data: {id: param},
+//             dataType: "json",
+//             success: function (data) {
+//                 $("#modalUsernamre").val(data.username);
+//                 $("#modalEmail").val(data.email);
+//                 $("#modalPhone").val(data.phone);
+//                 $("#modalUpdated").val(App.getFormatDateTime(new Date(data.updated)));
+//                 $("#modalCreated").val(App.getFormatDateTime(new Date(data.created)));
+//                 $("#modal-info-showDetail").modal("show");
+//             }
+//         })
+//     });
+//
+// });
 
 </script>
 

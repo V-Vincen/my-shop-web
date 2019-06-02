@@ -1,6 +1,7 @@
 package com.example.my.shop.mybatis.controller;
 
 import com.example.my.shop.mybatis.entity.TbUser;
+import com.example.my.shop.mybatis.entity.User;
 import com.example.my.shop.mybatis.service.TbUserService;
 import com.example.my.shop.mybatis.service.impl.TbUserServiceImpl;
 import com.example.my.shop.mybatis.utils.CookieUtils;

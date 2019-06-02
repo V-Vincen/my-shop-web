@@ -23,14 +23,14 @@ public class MybatisUtils {
             //读取配置文件 获取sqlsessionFactory
             InputStream inputStream = Resources.getResourceAsStream(resource);
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-            Configuration configuration = sqlSessionFactory.getConfiguration();
+           /* Configuration configuration = sqlSessionFactory.getConfiguration();
             System.out.println(String.format("configuration: %s ",configuration));
 
             Environment environment = configuration.getEnvironment();
             System.out.println(String.format("environment: %s ",environment));
 
             DataSource dataSource = environment.getDataSource();
-            System.out.println(String.format("dataSource: %s ",dataSource));
+            System.out.println(String.format("dataSource: %s ",dataSource));*/
 
         } catch (IOException e) {
             e.printStackTrace();

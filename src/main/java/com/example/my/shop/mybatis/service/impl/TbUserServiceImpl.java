@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.DigestUtils;
 
+import java.util.List;
+
 public class TbUserServiceImpl implements TbUserService{
 
     private static final Logger logger = LoggerFactory.getLogger(TbUserServiceImpl.class);
@@ -18,8 +20,7 @@ public class TbUserServiceImpl implements TbUserService{
 
     public int insert(TbUser record) {
         int insert = tbUserMapper.insert(record);
-        sqlSession.commit();//默认事务关闭，需要手动提交事务
-        sqlSession.close();
+        sqlSession.commit();
         return insert;
     }
 
@@ -27,6 +28,9 @@ public class TbUserServiceImpl implements TbUserService{
         logger.debug("调用 getByEmail(), email:{} password:{}", email, password);
 
         TbUser tbUser = tbUserMapper.getByEmail(email);
+        sqlSession.commit();//默认事务关闭，需要手动提交事务
+        //sqlSession.close();
+
         if (tbUser != null) {
             String md5Pwd = DigestUtils.md5DigestAsHex(password.getBytes());
             if (md5Pwd.equals(tbUser.getPassword())) {
@@ -36,4 +40,9 @@ public class TbUserServiceImpl implements TbUserService{
         return null;
     }
 
+
+    public List<TbUser> findAll(){
+        List<TbUser> all = tbUserMapper.findAll();
+        return all;
+    }
 }

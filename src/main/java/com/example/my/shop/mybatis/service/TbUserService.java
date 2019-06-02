@@ -3,6 +3,8 @@ package com.example.my.shop.mybatis.service;
 import com.example.my.shop.mybatis.entity.TbUser;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 
 public interface TbUserService {
 
@@ -20,4 +22,5 @@ public interface TbUserService {
 
     TbUser login(String email, String password);
 
+    List<TbUser> findAll();
 }

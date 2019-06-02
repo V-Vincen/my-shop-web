@@ -41,34 +41,34 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form:form id="inputForm" cssClass="form-horizontal" action="/user/save" method="post" modelAttribute="tbUser">
-                            <form:hidden path="id"/>
+                        <form id="inputForm" Class="form-horizontal" action="/user/save" method="post" >
+                            <input type="hidden" id="id" name="id"/>
                             <div class="box-body">
                                 <div class="form-group">
+                                    <%--<label for="email" class="col-sm-3 control-label">Email</label>--%>
                                     <label for="email" class="col-sm-3 control-label">Email</label>
-                                    <%--<label for="inputEmail3" class="col-sm-3 control-label">Email</label>--%>
 
                                     <div class="col-sm-6">
-                                        <form:input path="email" cssClass="form-control required email" placeholder="Enter email" />
-                                        <%--<input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Enter email">--%>
+                                        <%--<form:input path="email" cssClass="form-control required email" placeholder="Enter email" />--%>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <%--<label for="password" class="col-sm-3 control-label">Password</label>--%>
                                     <label for="password" class="col-sm-3 control-label">Password</label>
-                                    <%--<label for="inputPassword3" class="col-sm-3 control-label">Password</label>--%>
 
                                     <div class="col-sm-6">
-                                        <form:password path="password" cssClass="form-control required" placeholder="Enter password" />
-                                        <%--<input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Enter password">--%>
+                                        <%--<form:password path="password" cssClass="form-control required" placeholder="Enter password" />--%>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <%--<label for="username" class="col-sm-3 control-label">Username</label>--%>
                                     <label for="username" class="col-sm-3 control-label">Username</label>
-                                    <%--<label for="inputUsername" class="col-sm-3 control-label">Username</label>--%>
 
                                     <div class="col-sm-6">
-                                        <form:input path="username" cssClass="form-control required" placeholder="Enter username" />
-                                        <%--<input type="text" class="form-control" id="inputUsername" name="username" placeholder="Enter username">--%>
+                                        <%--<form:input path="username" cssClass="form-control required" placeholder="Enter username" />--%>
+                                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -76,8 +76,8 @@
                                     <%--<label for="inputPhone" class="col-sm-3 control-label">Phone</label>--%>
 
                                     <div class="col-sm-6">
-                                        <form:input path="phone" cssClass="form-control required mobile" placeholder="Enter phone" />
-                                        <%--<input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Enter phone">--%>
+                                        <%--<form:input path="phone" cssClass="form-control required mobile" placeholder="Enter phone" />--%>
+                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone">
                                     </div>
                                 </div>
                                 <c:if test="${baseResult != null}">
@@ -96,7 +96,7 @@
                             </div>
                             <!-- /.box-footer -->
 
-                        </form:form>
+                        </form>
                     </div>
                     <!-- /.box -->
                 </div>

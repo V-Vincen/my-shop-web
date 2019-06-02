@@ -79,8 +79,8 @@
     <!-- 定义映射文件 -->
     <mappers>
         <!-- sql映射文件的路径 -->
-        <!-- <mapper resource="com/feifan/mapper/UserMapper.xml"/>
-        <mapper resource="com/feifan/mapper/tbUserMapper.xml"/>  -->
+        <!--<mapper resource="com/feifan/mapper/UserMapper.xml"/>
+        <mapper resource="com/feifan/mapper/tbUserMapper.xml"/>-->
         <!-- 也可以通过配置接口的包扫描，但是xml文件路径要和接口的包路径一样-->
         <package name="com.example.my.shop.mybatis.mapper"/>
     </mappers>

@@ -36,8 +36,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="/user/list"><i class="fa fa-circle-o"></i>User List</a></li>
-                    <li><a href="/user/form"><i class="fa fa-circle-o"></i>User AddNew</a></li>
+                    <li><a href="/user_list"><i class="fa fa-circle-o"></i>User List</a></li>
+                    <li><a href="/user_form.jsp"><i class="fa fa-circle-o"></i>User AddNew</a></li>
                 </ul>
             </li>
             <li class="active treeview">
